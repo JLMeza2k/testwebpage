@@ -10,7 +10,7 @@ async function get_services(){
     let Services = await response.json();
     let options = '';
     Services.data.forEach(element => {
-        options = options + `<p>"${element.id}: ${element.service_description}</p>`;
+        options = options + `<p>${element.id}: ${element.service_description}</p>`;
     });
     document.getElementById('services').innerHTML = options;
 }
